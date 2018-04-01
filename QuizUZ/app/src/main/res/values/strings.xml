@@ -1,0 +1,28 @@
+<resources>
+    <!--Activities-->
+    <string name="app_name">QuizUZ</string>
+    <string name="title_activity_game_main">QuizUZ</string>
+    <string name="title_activity_game_categories">Kategorie</string>
+    <string name="title_activity_game_authors">Autorzy</string>
+    <string name="title_activity_game_help">Pomoc</string>
+
+    <!--Main menu buttons-->
+    <string name="playButtonText">Graj!</string>
+    <string name="randomCategoryButtonText">Losowa kategoria</string>
+    <string name="categoriesButtonText">Kategorie</string>
+    <string name="statsButtonText">Statystyki</string>
+    <string name="authorsButtonText">Autorzy</string>
+    <string name="helpButtonText">\?</string>
+
+    <!--Main game screen-->
+    <string name="questionText">Pytanie</string>
+    <string name="answerButtonText">Odpowiedź</string>
+
+    <!--Categories screen-->
+    <string name="allCatButtonText">Wszystkie</string>
+
+    <!--Authors screen-->
+    <string name="authorsText">
+        Gra stworzona na potrzeby konkursu \"Call of Code\"\nAutorzy:\nMateusz Borowski\nPaweł Jamroziak
+    </string>
+</resources>

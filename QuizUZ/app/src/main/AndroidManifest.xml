@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uz.pl.quizuz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".GameMenu"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/QuizTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GameMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_main"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+        </activity>
+        <activity
+            android:name=".GameCategories"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_categories"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+        </activity>
+        <activity
+            android:name=".GameAuthors"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_authors"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+        </activity>
+        <activity
+            android:name=".GameHelp"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_help"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+        </activity>
+    </application>
+
+</manifest>
