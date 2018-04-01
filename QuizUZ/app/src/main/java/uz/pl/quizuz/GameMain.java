@@ -2,9 +2,11 @@ package uz.pl.quizuz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +32,9 @@ public class GameMain extends AppCompatActivity {
     private int correctAnswers;
     //GUI component
     private TextView questionTextView;
-    private Button answer1Button, answer2Button, answer3Button, answer4Button;
+    private ProgressBar leftTimeBar;
+    private CountDownTimer countDownTimer;
+    private Button[] answerButtons;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,11 +51,13 @@ public class GameMain extends AppCompatActivity {
      * Sets all needed gui components
      */
     private void setView() {
+        answerButtons = new Button[4];
+        leftTimeBar = findViewById(R.id.leftTimeBar);
         questionTextView = findViewById(R.id.questionTextView);
-        answer1Button = findViewById(R.id.answer1Button);
-        answer2Button = findViewById(R.id.answer2Button);
-        answer3Button = findViewById(R.id.answer3Button);
-        answer4Button = findViewById(R.id.answer4Button);
+        answerButtons[0] = findViewById(R.id.answer1Button);
+        answerButtons[1] = findViewById(R.id.answer2Button);
+        answerButtons[2] = findViewById(R.id.answer3Button);
+        answerButtons[3] = findViewById(R.id.answer4Button);
     }
 
     /**
@@ -69,7 +75,11 @@ public class GameMain extends AppCompatActivity {
     private void setQuestionsList() {
         DatabaseAccessor databaseAccessor = DatabaseAccessor.getInstance(this);
         databaseAccessor.open();
-        questionsList = databaseAccessor.getQuestions(categoryID);
+        if (categoryID != 0) {
+            questionsList = databaseAccessor.getQuestions(categoryID);
+        } else {
+            questionsList = databaseAccessor.getQuestions();
+        }
         databaseAccessor.close();
         questionIterator = questionsList.iterator();
         Collections.shuffle(questionsList);
@@ -101,30 +111,63 @@ public class GameMain extends AppCompatActivity {
         }
         List<String> answers = shuffleAnswers();
 
-        //text assignation
+        //text assignation and button listeners
         questionTextView.setText(currentQuestion.getQuestion());
-        answer1Button.setText(answers.get(0));
-        answer2Button.setText(answers.get(1));
-        answer3Button.setText(answers.get(2));
-        answer4Button.setText(answers.get(3));
+        for (int index = 0; index < answerButtons.length; index++) {
+            String tempAnswer = answers.get(index);
+            answerButtons[index].setText(tempAnswer);
+            answerButtons[index].setOnClickListener(view -> checkIfCorrect(tempAnswer));
+        }
 
-        //button listeners
-        answer1Button.setOnClickListener(view -> checkIfCorrect(answers.get(0)));
-        answer2Button.setOnClickListener(view -> checkIfCorrect(answers.get(1)));
-        answer3Button.setOnClickListener(view -> checkIfCorrect(answers.get(2)));
-        answer4Button.setOnClickListener(view -> checkIfCorrect(answers.get(3)));
+        //start counting time
+        countDown();
     }
 
     /**
      * Checks if answer is correct
+     *
      * @param answer given by user
      */
     private void checkIfCorrect(String answer) {
+        if(answer == null) { //If there's not questions in category
+            countDownTimer.cancel();
+            gameView();
+        }
         if (answer.equals(currentQuestion.getCorrectAnswer())) {
             Toast.makeText(this, "Poprawna odpowiedź", Toast.LENGTH_SHORT).show();
+            correctAnswers++;
         } else {
             Toast.makeText(this, "Niepoprawna odpowiedź", Toast.LENGTH_SHORT).show();
         }
+        countDownTimer.cancel(); //stops previous time counting
         gameView();
+    }
+
+    /**
+     * Starts counting time for user's answer
+     */
+    private void countDown() {
+        countDownTimer = new CountDownTimer(20000,1000) {
+            int i = 0;
+            @Override
+            public void onTick(long milliSecondUntilFinished) {
+                i++;
+                leftTimeBar.setProgress(i * 100 / (20000/1000));
+            }
+            @Override
+            public void onFinish() {
+                leftTimeBar.setProgress(100);
+                checkIfCorrect("");
+            }
+        }.start();
+    }
+
+    /**
+     * Stops counter when activity is no longer visible
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        countDownTimer.cancel();
     }
 }

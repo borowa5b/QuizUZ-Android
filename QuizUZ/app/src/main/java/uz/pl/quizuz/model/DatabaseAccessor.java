@@ -110,7 +110,7 @@ public class DatabaseAccessor {
      */
     public List<Question> getQuestions(int categoryID) {
         List<Question> questionsList = new ArrayList<>();
-        String[] params = new String[] {String.valueOf(categoryID)};
+        String[] params = new String[]{String.valueOf(categoryID)};
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM Questions WHERE categoryID = ?", params);
         if (cursor.moveToFirst()) {
             do {
@@ -125,6 +125,15 @@ public class DatabaseAccessor {
                 tempQuestion.setCorrectAnswer(cursor.getString(7));
                 questionsList.add(tempQuestion);
             } while (cursor.moveToNext());
+        } else {
+            Question tempQuestion = new Question();
+            tempQuestion.setQuestion("Brak pytań dla tej kategorii");
+            tempQuestion.setCategoryID(categoryID);
+            tempQuestion.setAnswer1("");
+            tempQuestion.setAnswer2("");
+            tempQuestion.setAnswer3("");
+            tempQuestion.setAnswer4("");
+            questionsList.add(tempQuestion);
         }
         cursor.close();
         return questionsList;
