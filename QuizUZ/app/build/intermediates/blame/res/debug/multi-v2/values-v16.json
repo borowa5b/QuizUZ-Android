@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "/home/borowa/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7fecbc1bec7eb073e8142472f278c398/res/values-v16/values-v16.xml",
