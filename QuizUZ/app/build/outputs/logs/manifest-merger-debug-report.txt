@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
+ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-v4:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f460fadf5cd2352ea4caca98ef4d34c3/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/borowa/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/766c53c9ac5bc3518aeeeb3644cb7f45/AndroidManifest.xml:2:1-11:12
@@ -15,25 +15,25 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /home/borowa/.gradle
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/3f2182b5e29ca0d0113003aae9c9db4d/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7fecbc1bec7eb073e8142472f278c398/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/669105a83e760defe3b6d73a02f6f888/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
 	package
 		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:3:5-27
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
-		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
-		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:1-76:12
 		INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:5:5-64:19
+ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:5:5-74:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/borowa/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f460fadf5cd2352ea4caca98ef4d34c3/AndroidManifest.xml:25:5-29:19
@@ -143,9 +143,17 @@ ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.x
 	android:name
 		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:54:13-37
 activity#uz.pl.quizuz.GameStats
-ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:63:9-56
+ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:63:9-73:20
+	android:parentActivityName
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:67:13-51
+	android:label
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:66:13-62
+	android:configChanges
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:65:13-74
+	android:theme
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:68:13-45
 	android:name
-		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:63:19-44
+		ADDED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml:64:13-38
 uses-sdk
 INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/borowa/QuizUZ-CoD-Android/QuizUZ/app/src/main/AndroidManifest.xml

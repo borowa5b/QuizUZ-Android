@@ -776,12 +776,12 @@
         "source": "/home/borowa/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/7fecbc1bec7eb073e8142472f278c398/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "/home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "/home/borowa/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f01c7f9d96daace7ce774ba4ace60649/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",

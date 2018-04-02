@@ -68,6 +68,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="uz.pl.quizuz.GameMenu" />
         </activity>
+        <activity
+            android:name="uz.pl.quizuz.GameStats"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_stats"
+            android:parentActivityName="uz.pl.quizuz.GameMenu"
+            android:theme="@style/QuizTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"

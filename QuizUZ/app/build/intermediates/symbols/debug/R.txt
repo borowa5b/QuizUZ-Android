@@ -868,6 +868,7 @@ int string title_activity_game_authors 0x7f0b002c
 int string title_activity_game_categories 0x7f0b002d
 int string title_activity_game_help 0x7f0b002e
 int string title_activity_game_main 0x7f0b002f
+int string title_activity_game_stats 0x7f0b0030
 int style AlertDialog_AppCompat 0x7f0c0000
 int style AlertDialog_AppCompat_Light 0x7f0c0001
 int style Animation_AppCompat_Dialog 0x7f0c0002

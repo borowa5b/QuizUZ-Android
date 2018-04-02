@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sat Mar 31 02:59:22 CEST 2018
-0.baseType=DIRECTORY
-0.base=/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/assets/debug
-0.path=databases/QuizUZ_DB.sqlite
-0.set=ASSET
-count=1

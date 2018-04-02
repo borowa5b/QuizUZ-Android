@@ -2,84 +2,110 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="COLD"
+    build-mode="FULL"
     density="420dpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
     plugin-version="3.1.0"
-    timestamp="1522609197268"
-    token="6761481437086645951"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="1522666972102"
+    token="-8305658912742553024"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1555" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="549" />
+        duration="0" />
     <task
         name="verifier"
-        duration="30" />
+        duration="0" />
 
     <artifact
-        location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1522608756898"
+        timestamp="1522666972102"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1522609197268"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>

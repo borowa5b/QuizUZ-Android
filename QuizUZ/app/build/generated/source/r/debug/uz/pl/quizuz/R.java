@@ -2970,6 +2970,7 @@ public final class R {
     public static final int title_activity_game_categories=0x7f0b002d;
     public static final int title_activity_game_help=0x7f0b002e;
     public static final int title_activity_game_main=0x7f0b002f;
+    public static final int title_activity_game_stats=0x7f0b0030;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;

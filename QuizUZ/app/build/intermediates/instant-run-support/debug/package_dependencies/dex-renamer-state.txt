@@ -1,4 +1,0 @@
-#Sun Apr 01 00:54:34 CEST 2018
-base.0=/home/borowa/AndroidStudioProjects/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/10
-path.0=classes.dex
-renamed.0=classes.dex
