@@ -60,6 +60,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="uz.pl.quizuz.GameMenu" />
         </activity>
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".GameStats"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_stats"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.pl.quizuz.GameMenu" />
+
+        </activity>
+>>>>>>> feat
     </application>
 
 </manifest>
