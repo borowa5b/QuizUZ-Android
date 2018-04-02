@@ -60,8 +60,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="uz.pl.quizuz.GameMenu" />
         </activity>
-<<<<<<< HEAD
-=======
         <activity
             android:name=".GameStats"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -73,7 +71,6 @@
                 android:value="uz.pl.quizuz.GameMenu" />
 
         </activity>
->>>>>>> feat
     </application>
 
 </manifest>

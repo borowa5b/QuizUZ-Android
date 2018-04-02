@@ -6,11 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
-<<<<<<< HEAD
-/**
- * Game main menu class
-=======
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import uz.pl.quizuz.model.DatabaseAccessor;
@@ -18,7 +13,6 @@ import uz.pl.quizuz.model.DatabaseAccessor;
 /**
  * Game main menu class
  *
->>>>>>> feat
  * @author Mateusz Borowski
  */
 public class GameMenu extends AppCompatActivity {
@@ -40,8 +34,6 @@ public class GameMenu extends AppCompatActivity {
         Button playButton = findViewById(R.id.playButton);
         playButton.setOnClickListener(view -> startActivity(new Intent(this, GameMain.class)));
 
-<<<<<<< HEAD
-=======
         Button randomCategoryButton = findViewById(R.id.randomcatButton);
         randomCategoryButton.setOnClickListener(view -> {
             int categoryID = drawRandomCategory();
@@ -50,14 +42,11 @@ public class GameMenu extends AppCompatActivity {
             startActivity(intent); //Starts GameMain Activity
         });
 
->>>>>>> feat
         Button authorsButton = findViewById(R.id.authorsButton);
         authorsButton.setOnClickListener(view -> startActivity(new Intent(this, GameAuthors.class)));
 
         Button helpButton = findViewById(R.id.helpButton);
         helpButton.setOnClickListener(view -> startActivity(new Intent(this, GameHelp.class)));
-<<<<<<< HEAD
-=======
 
         Button statsButton = findViewById(R.id.statsButton);
         statsButton.setOnClickListener(view -> startActivity(new Intent(this, GameStats.class)));
@@ -77,6 +66,5 @@ public class GameMenu extends AppCompatActivity {
 
         randomCategoryNumber = ThreadLocalRandom.current().nextInt(1, numbersOfCategories + 1);
         return randomCategoryNumber;
->>>>>>> feat
     }
 }

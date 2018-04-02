@@ -54,22 +54,14 @@
                 <Button
                     android:id="@+id/answer1Button"
                     android:layout_width="match_parent"
-<<<<<<< HEAD
-                    android:layout_height="wrap_content"
-=======
                     android:layout_height="100dp"
->>>>>>> feat
                     android:layout_weight="1"
                     android:text="@string/answerButtonText" />
 
                 <Button
                     android:id="@+id/answer3Button"
                     android:layout_width="match_parent"
-<<<<<<< HEAD
-                    android:layout_height="wrap_content"
-=======
                     android:layout_height="100dp"
->>>>>>> feat
                     android:layout_weight="1"
                     android:text="@string/answerButtonText" />
             </LinearLayout>
@@ -84,22 +76,14 @@
                 <Button
                     android:id="@+id/answer2Button"
                     android:layout_width="match_parent"
-<<<<<<< HEAD
-                    android:layout_height="wrap_content"
-=======
                     android:layout_height="100dp"
->>>>>>> feat
                     android:layout_weight="1"
                     android:text="@string/answerButtonText" />
 
                 <Button
                     android:id="@+id/answer4Button"
                     android:layout_width="match_parent"
-<<<<<<< HEAD
-                    android:layout_height="wrap_content"
-=======
                     android:layout_height="100dp"
->>>>>>> feat
                     android:layout_weight="1"
                     android:text="@string/answerButtonText" />
             </LinearLayout>

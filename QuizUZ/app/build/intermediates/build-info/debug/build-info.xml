@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522666972102"
+    timestamp="1522670978466"
     token="-8305658912742553024"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -23,6 +23,9 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
     <artifact
         location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
@@ -59,14 +62,14 @@
     <artifact
         location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1522666972102"
+        timestamp="1522670978466"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -103,9 +106,6 @@
         <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
-        <artifact
-            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

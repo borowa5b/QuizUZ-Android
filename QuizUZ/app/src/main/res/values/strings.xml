@@ -3,10 +3,7 @@
     <string name="app_name">QuizUZ</string>
     <string name="title_activity_game_main">QuizUZ</string>
     <string name="title_activity_game_categories">Kategorie</string>
-<<<<<<< HEAD
-=======
     <string name="title_activity_game_stats">Statystyki</string>
->>>>>>> feat
     <string name="title_activity_game_authors">Autorzy</string>
     <string name="title_activity_game_help">Pomoc</string>
 
