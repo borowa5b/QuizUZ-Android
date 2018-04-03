@@ -26,4 +26,13 @@
     <string name="authorsText">
         Gra stworzona na potrzeby konkursu \"Call of Code\"\nAutorzy:\nMateusz Borowski\nPaweł Jamroziak
     </string>
+
+    <!--Statistics screen-->
+    <string name="playedGamesText">Rozegrane gry:</string>
+    <string name="wonGamesText">Wygrane gry:</string>
+    <string name="lostGamesText">Prezegrane gry:</string>
+    <string name="correctAnswersText">Poprawne odpowiedzi:</string>
+    <string name="incorrectAnswersText">Niepoprawne odpowiedzi:</string>
+    <string name="resetStatsButtonText">Resetuj</string>
+    <string name="zeroText">0</string>
 </resources>

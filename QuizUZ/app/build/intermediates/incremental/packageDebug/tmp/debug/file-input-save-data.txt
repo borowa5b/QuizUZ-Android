@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 02 13:01:42 CEST 2018
+#Tue Apr 03 15:29:18 CEST 2018
 1.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/12
 2.path=databases/QuizUZ_DB.sqlite
 0.baseType=DIRECTORY

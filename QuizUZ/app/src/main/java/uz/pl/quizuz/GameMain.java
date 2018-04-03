@@ -1,9 +1,13 @@
 package uz.pl.quizuz;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -24,15 +28,17 @@ import uz.pl.quizuz.model.Question;
  * @author Mateusz Borowski
  */
 public class GameMain extends AppCompatActivity {
+    //For accessing db
+    private DatabaseAccessor databaseAccessor;
     //Question related variables
     private int categoryID;
     private List<Question> questionsList;
     private Iterator<Question> questionIterator;
     private Question currentQuestion;
-    private int correctAnswers;
+    private int questionsCount;
     //GUI component
     private TextView questionTextView;
-    private ProgressBar leftTimeBar;
+    private ProgressBar leftTimeBar, questionBar;
     private CountDownTimer countDownTimer;
     private Button[] answerButtons;
 
@@ -51,8 +57,10 @@ public class GameMain extends AppCompatActivity {
      * Sets all needed gui components
      */
     private void setView() {
+        databaseAccessor = DatabaseAccessor.getInstance(this);
         answerButtons = new Button[4];
         leftTimeBar = findViewById(R.id.leftTimeBar);
+        questionBar = findViewById(R.id.questionsBar);
         questionTextView = findViewById(R.id.questionTextView);
         answerButtons[0] = findViewById(R.id.answer1Button);
         answerButtons[1] = findViewById(R.id.answer2Button);
@@ -73,7 +81,6 @@ public class GameMain extends AppCompatActivity {
      * iterator and shuffles questions
      */
     private void setQuestionsList() {
-        DatabaseAccessor databaseAccessor = DatabaseAccessor.getInstance(this);
         databaseAccessor.open();
         if (categoryID != 0) {
             questionsList = databaseAccessor.getQuestions(categoryID);
@@ -104,7 +111,10 @@ public class GameMain extends AppCompatActivity {
      * Main game code
      */
     private void gameView() {
-        int questionsCount = 0;
+        //Increases questions number in this game and sets progress bar
+        questionsCount++;
+        questionBar.setProgress(questionsCount);
+
         //current question assignation
         if (questionIterator.hasNext()) {
             currentQuestion = questionIterator.next();
@@ -114,9 +124,10 @@ public class GameMain extends AppCompatActivity {
         //text assignation and button listeners
         questionTextView.setText(currentQuestion.getQuestion());
         for (int index = 0; index < answerButtons.length; index++) {
-            String tempAnswer = answers.get(index);
-            answerButtons[index].setText(tempAnswer);
-            answerButtons[index].setOnClickListener(view -> checkIfCorrect(tempAnswer));
+            Button tempButton = answerButtons[index];
+            tempButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary)); //restores original background
+            tempButton.setText(answers.get(index)); //sets answers text
+            tempButton.setOnClickListener(view -> checkIfCorrect(tempButton)); //sets listener
         }
 
         //start counting time
@@ -125,39 +136,77 @@ public class GameMain extends AppCompatActivity {
 
     /**
      * Checks if answer is correct
+     * if correct button turns green
+     * if incorrect button turns red
      *
-     * @param answer given by user
+     * @param answerButton given by user
      */
-    private void checkIfCorrect(String answer) {
-        if(answer == null) { //If there's not questions in category
+    private void checkIfCorrect(Button answerButton) {
+        if (answerButton == null) { //If there's not questions in category
             countDownTimer.cancel();
             gameView();
         }
-        if (answer.equals(currentQuestion.getCorrectAnswer())) {
-            Toast.makeText(this, "Poprawna odpowiedź", Toast.LENGTH_SHORT).show();
-            correctAnswers++;
-        } else {
-            Toast.makeText(this, "Niepoprawna odpowiedź", Toast.LENGTH_SHORT).show();
+
+        //Disables buttons
+        handleButtons();
+
+        databaseAccessor.open();
+        if (answerButton != null && answerButton.getText().toString().equals(currentQuestion.getCorrectAnswer())) {
+            answerButton.setBackgroundColor(Color.GREEN);
+            databaseAccessor.increaseCorrectAnswers();
+        } else if(answerButton != null && !answerButton.getText().toString().equals(currentQuestion.getCorrectAnswer())) {
+            answerButton.setBackgroundColor(Color.RED);
+            databaseAccessor.increaseIncorrectAnswers();
         }
+        databaseAccessor.close();
         countDownTimer.cancel(); //stops previous time counting
-        gameView();
+
+        //Waits second before next question or end game
+        Handler handler = new Handler();
+        handler.postDelayed(this::checkIfEnd, 1000);
+    }
+
+    /**
+     * Handles buttons behavior when answer is selected
+     */
+    private void handleButtons() {
+        for(Button button : answerButtons) {
+            button.setClickable(false);
+        }
+    }
+
+    /**
+     * Checks if game should end
+     */
+    private void checkIfEnd() {
+        if (questionsCount == 10) {
+            databaseAccessor.open();
+            databaseAccessor.increaseGamesPlayed();
+            databaseAccessor.close();
+            countDownTimer.cancel();
+            NavUtils.navigateUpFromSameTask(this);
+        } else {
+            gameView();
+        }
     }
 
     /**
      * Starts counting time for user's answer
      */
     private void countDown() {
-        countDownTimer = new CountDownTimer(20000,1000) {
+        countDownTimer = new CountDownTimer(20000, 1000) {
             int i = 0;
+
             @Override
             public void onTick(long milliSecondUntilFinished) {
                 i++;
-                leftTimeBar.setProgress(i * 100 / (20000/1000));
+                leftTimeBar.setProgress(i * 100 / (20000 / 1000));
             }
+
             @Override
             public void onFinish() {
                 leftTimeBar.setProgress(100);
-                checkIfCorrect("");
+                checkIfCorrect(new Button(GameMain.this));
             }
         }.start();
     }
