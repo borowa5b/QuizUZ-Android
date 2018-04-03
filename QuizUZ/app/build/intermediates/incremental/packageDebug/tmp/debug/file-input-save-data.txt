@@ -1,15 +1,11 @@
 #Internal package file, do not edit.
-#Mon Apr 02 14:02:30 CEST 2018
-1.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/12
-2.path=databases/QuizUZ_DB.sqlite
+#Tue Apr 03 17:14:52 CEST 2018
+1.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/assets/debug
 0.baseType=DIRECTORY
-2.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/assets/debug
-2.set=ASSET
 1.baseType=DIRECTORY
-count=3
-1.set=DEX
+count=2
+1.set=ASSET
 0.path=classes.dex
 0.set=DEX
-0.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/13
-2.baseType=DIRECTORY
-1.path=classes.dex
+0.base=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/15
+1.path=databases/QuizUZ_DB.sqlite

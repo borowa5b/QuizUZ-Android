@@ -56,6 +56,10 @@ public class GameCategories extends AppCompatActivity {
         });
         linearLayout.addView(allCatButton);
 
+        space = new Space(this);
+        space.setMinimumHeight(2);
+        linearLayout.addView(space);
+
         //Categories buttons
         Button[] catButtons = new Button[categoriesList.size()];
         for (int i = 0; i < catButtons.length; i++) {

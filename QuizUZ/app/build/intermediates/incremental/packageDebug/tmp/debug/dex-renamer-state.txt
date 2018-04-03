@@ -1,7 +1,4 @@
-#Mon Apr 02 14:09:55 CEST 2018
-base.0=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/13
-path.1=classes.dex
-renamed.1=classes2.dex
+#Tue Apr 03 17:14:51 CEST 2018
+base.0=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/15
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/transforms/dexMerger/debug/12
