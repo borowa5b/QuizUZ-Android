@@ -24,7 +24,8 @@
 
     <!--Authors screen-->
     <string name="authorsText">
-        Gra stworzona na potrzeby konkursu \"Call of Code\"\nAutorzy:\nMateusz Borowski\nPaweł Jamroziak
+        Gra stworzona na potrzeby konkursu \"Call of Code - First Lane\" przeprowadzanego przez firmę GlobalLogic
+        &lt;br>&lt;br>Autorzy:&lt;br>&lt;b>Mateusz Borowski&lt;/b>&lt;br>&lt;b>Paweł Jamroziak&lt;/b>
     </string>
 
     <!--Statistics screen-->
@@ -35,4 +36,14 @@
     <string name="incorrectAnswersText">Niepoprawne odpowiedzi:</string>
     <string name="resetStatsButtonText">Resetuj</string>
     <string name="zeroText">0</string>
+
+    <!--Help screen-->
+    <string name="helpText">
+        &lt;b>Graj!&lt;/b> - rozpoczyna nową grę uzwględniającą pytania ze wszystkich kategorii
+        &lt;br>&lt;br>&lt;b>Losowa kategoria&lt;/b> - rozpoczyna nową grę z losową kategorią
+        &lt;br>&lt;br>&lt;b>Kategorie&lt;/b> - otwiera listę kategorii
+        &lt;br>&lt;br>&lt;b>Statystyki&lt;/b> - otwiera okno statystyk
+        &lt;br>&lt;br>&lt;b>Autorzy&lt;/b> - otwiera okno z informacjami o autorach aplikacji
+        &lt;br>&lt;br>&lt;b>?&lt;/b> - otwiera aktualnie otwarte okno
+    </string>
 </resources>

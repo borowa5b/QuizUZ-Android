@@ -5,35 +5,36 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.0"
-    timestamp="1522762156331"
+    timestamp="1522767303524"
     token="-8305658912742553024"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1390" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="612" />
     <task
         name="verifier"
-        duration="0" />
+        duration="37" />
 
     <artifact
-        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1522761988370"
+        timestamp="1522766329109"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
         <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -68,16 +69,25 @@
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1522767250593"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522762156331"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1522767303524"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
