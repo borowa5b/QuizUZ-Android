@@ -13,7 +13,6 @@
     <string name="categoriesButtonText">Kategorie</string>
     <string name="statsButtonText">Statystyki</string>
     <string name="authorsButtonText">Autorzy</string>
-    <string name="helpButtonText">\?</string>
 
     <!--Main game screen-->
     <string name="questionText">Pytanie</string>
@@ -39,8 +38,7 @@
 
     <!--Help screen-->
     <string name="helpText">
-        &lt;b>Graj!&lt;/b> - rozpoczyna nową grę uzwględniającą pytania ze wszystkich kategorii
-        &lt;br>&lt;br>&lt;b>Losowa kategoria&lt;/b> - rozpoczyna nową grę z losową kategorią
+        &lt;b>Graj!&lt;/b> - rozpoczyna nową grę z losową kategorią
         &lt;br>&lt;br>&lt;b>Kategorie&lt;/b> - otwiera listę kategorii
         &lt;br>&lt;br>&lt;b>Statystyki&lt;/b> - otwiera okno statystyk
         &lt;br>&lt;br>&lt;b>Autorzy&lt;/b> - otwiera okno z informacjami o autorach aplikacji

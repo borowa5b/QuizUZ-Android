@@ -29,7 +29,8 @@ public class GameMain extends AppCompatActivity {
     //For accessing db
     private DatabaseAccessor databaseAccessor;
     //Question related variables
-    private int categoryID;
+    private int categoryID = -1;
+    private ArrayList<Integer> selectedIDs;
     private List<Question> questionsList;
     private Iterator<Question> questionIterator;
     private Question currentQuestion;
@@ -72,16 +73,22 @@ public class GameMain extends AppCompatActivity {
     private void getIntentVariables() {
         Intent intent = getIntent();
         categoryID = intent.getIntExtra("categoryID", 0);
+        selectedIDs = intent.getIntegerArrayListExtra("categoryIDs");
     }
 
     /**
-     * Sets questionList variable using questions with categoryID getter from database,
+     * Sets questionList variable using questions with category id getter from database,
      * iterator and shuffles questions
      */
     private void setQuestionsList() {
         databaseAccessor.open();
-        if (categoryID != 0) {
+        if(categoryID != 0) {
             questionsList = databaseAccessor.getQuestions(categoryID);
+        } else if (!selectedIDs.isEmpty()) {
+            questionsList = new ArrayList<>();
+            for(Integer id : selectedIDs) {
+                questionsList.addAll(databaseAccessor.getQuestions(id));
+            }
         } else {
             questionsList = databaseAccessor.getQuestions();
         }

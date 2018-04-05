@@ -3,6 +3,7 @@ package uz.pl.quizuz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
@@ -32,10 +33,7 @@ public class GameMenu extends AppCompatActivity {
         categoriesButton.setOnClickListener(view -> startActivity(new Intent(this, GameCategories.class)));
 
         Button playButton = findViewById(R.id.playButton);
-        playButton.setOnClickListener(view -> startActivity(new Intent(this, GameMain.class)));
-
-        Button randomCategoryButton = findViewById(R.id.randomcatButton);
-        randomCategoryButton.setOnClickListener(view -> {
+        playButton.setOnClickListener(view -> {
             int categoryID = drawRandomCategory();
             Intent intent = new Intent(this, GameMain.class);
             intent.putExtra("categoryID", categoryID); //Passes chosen categoryID to new opened activity
@@ -45,11 +43,11 @@ public class GameMenu extends AppCompatActivity {
         Button authorsButton = findViewById(R.id.authorsButton);
         authorsButton.setOnClickListener(view -> startActivity(new Intent(this, GameAuthors.class)));
 
-        Button helpButton = findViewById(R.id.helpButton);
-        helpButton.setOnClickListener(view -> startActivity(new Intent(this, GameHelp.class)));
-
         Button statsButton = findViewById(R.id.statsButton);
         statsButton.setOnClickListener(view -> startActivity(new Intent(this, GameStats.class)));
+
+        FloatingActionButton fab = findViewById(R.id.FAB);
+        fab.setOnClickListener(view -> startActivity(new Intent(this, GameHelp.class)));
     }
 
     /**
