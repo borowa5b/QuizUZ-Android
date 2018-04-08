@@ -69,7 +69,13 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="uz.pl.quizuz.GameMenu" />
-
+        </activity>
+        <activity
+            android:name=".GameOver"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_game_over"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/QuizTheme">
         </activity>
     </application>
 

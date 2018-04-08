@@ -6,23 +6,26 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522930607049"
+    timestamp="1523192532622"
     token="-8305658912742553024"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1840" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="634" />
+        duration="0" />
     <task
         name="verifier"
-        duration="30" />
+        duration="0" />
 
+    <artifact
+        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
     <artifact
         location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
@@ -59,14 +62,14 @@
     <artifact
         location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1522930607049"
+        timestamp="1523192532622"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -103,9 +106,6 @@
         <artifact
             location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
-        <artifact
-            location="/home/borowa/QuizUZ-CoD-Android/QuizUZ/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

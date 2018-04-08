@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 import uz.pl.quizuz.model.DatabaseAccessor;
@@ -35,8 +36,10 @@ public class GameMenu extends AppCompatActivity {
         Button playButton = findViewById(R.id.playButton);
         playButton.setOnClickListener(view -> {
             int categoryID = drawRandomCategory();
+            ArrayList<Integer> categoryIDs = new ArrayList<>();
+            categoryIDs.add(categoryID);
             Intent intent = new Intent(this, GameMain.class);
-            intent.putExtra("categoryID", categoryID); //Passes chosen categoryID to new opened activity
+            intent.putExtra("categoryIDs", categoryIDs); //Passes chosen categoryID to new opened activity
             startActivity(intent); //Starts GameMain Activity
         });
 

@@ -6,6 +6,7 @@
     <string name="title_activity_game_stats">Statystyki</string>
     <string name="title_activity_game_authors">Autorzy</string>
     <string name="title_activity_game_help">Pomoc</string>
+    <string name="title_activity_game_over">Koniec gry!</string>
 
     <!--Main menu buttons-->
     <string name="playButtonText">Graj!</string>
@@ -44,4 +45,7 @@
         &lt;br>&lt;br>&lt;b>Autorzy&lt;/b> - otwiera okno z informacjami o autorach aplikacji
         &lt;br>&lt;br>&lt;b>?&lt;/b> - otwiera aktualnie otwarte okno
     </string>
+    <string name="startAgainButtonText">Zagraj ponownie</string>
+    <string name="returnToMainMenuButtonText">Wróć do menu</string>
+    <string name="selectedCatText">Wybrane kategorie:</string>
 </resources>

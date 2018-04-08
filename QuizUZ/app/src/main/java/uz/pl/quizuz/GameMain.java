@@ -29,12 +29,12 @@ public class GameMain extends AppCompatActivity {
     //For accessing db
     private DatabaseAccessor databaseAccessor;
     //Question related variables
-    private int categoryID = -1;
     private ArrayList<Integer> selectedIDs;
     private List<Question> questionsList;
     private Iterator<Question> questionIterator;
     private Question currentQuestion;
     private int questionsCount;
+    private int correctAnswers, incorrectAnswers;
     //GUI component
     private TextView questionTextView;
     private ProgressBar leftTimeBar, questionBar;
@@ -68,11 +68,10 @@ public class GameMain extends AppCompatActivity {
     }
 
     /**
-     * Gets categoryID from GameCategories activity
+     * Gets categoryIDs from GameCategories activity
      */
     private void getIntentVariables() {
         Intent intent = getIntent();
-        categoryID = intent.getIntExtra("categoryID", 0);
         selectedIDs = intent.getIntegerArrayListExtra("categoryIDs");
     }
 
@@ -82,15 +81,13 @@ public class GameMain extends AppCompatActivity {
      */
     private void setQuestionsList() {
         databaseAccessor.open();
-        if(categoryID != 0) {
-            questionsList = databaseAccessor.getQuestions(categoryID);
+        if (selectedIDs.contains(0)) {
+            questionsList = databaseAccessor.getQuestions();
         } else if (!selectedIDs.isEmpty()) {
             questionsList = new ArrayList<>();
-            for(Integer id : selectedIDs) {
+            for (Integer id : selectedIDs) {
                 questionsList.addAll(databaseAccessor.getQuestions(id));
             }
-        } else {
-            questionsList = databaseAccessor.getQuestions();
         }
         databaseAccessor.close();
         questionIterator = questionsList.iterator();
@@ -155,13 +152,16 @@ public class GameMain extends AppCompatActivity {
         //Disables buttons
         handleButtons();
 
+        //Changes button's color according to answer & increases answers counter
         databaseAccessor.open();
         if (answerButton != null && answerButton.getText().toString().equals(currentQuestion.getCorrectAnswer())) {
             answerButton.setBackgroundColor(Color.GREEN);
             databaseAccessor.increaseCorrectAnswers();
-        } else if(answerButton != null && !answerButton.getText().toString().equals(currentQuestion.getCorrectAnswer())) {
+            correctAnswers++;
+        } else if (answerButton != null && !answerButton.getText().toString().equals(currentQuestion.getCorrectAnswer())) {
             answerButton.setBackgroundColor(Color.RED);
             databaseAccessor.increaseIncorrectAnswers();
+            incorrectAnswers++;
         }
         databaseAccessor.close();
         countDownTimer.cancel(); //stops previous time counting
@@ -175,7 +175,7 @@ public class GameMain extends AppCompatActivity {
      * Handles buttons behavior when answer is selected
      */
     private void handleButtons() {
-        for(Button button : answerButtons) {
+        for (Button button : answerButtons) {
             button.setClickable(false);
         }
     }
@@ -189,7 +189,12 @@ public class GameMain extends AppCompatActivity {
             databaseAccessor.increaseGamesPlayed();
             databaseAccessor.close();
             countDownTimer.cancel();
-            NavUtils.navigateUpFromSameTask(this);
+            //NavUtils.navigateUpFromSameTask(this);
+            Intent intent = new Intent(this, GameOver.class);
+            intent.putExtra("categoryIDs", selectedIDs);
+            intent.putExtra("correctAnswers", correctAnswers);
+            intent.putExtra("incorrectAnswers", incorrectAnswers);
+            startActivity(intent);
         } else {
             gameView();
         }
@@ -214,5 +219,10 @@ public class GameMain extends AppCompatActivity {
                 checkIfCorrect(new Button(GameMain.this));
             }
         }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        NavUtils.navigateUpFromSameTask(this);
     }
 }

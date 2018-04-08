@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -48,13 +49,15 @@ public class GameCategories extends AppCompatActivity {
         space.setMinimumHeight(2);
         linearLayout.addView(space);
 
+        ArrayList<Integer> selectedIDs = new ArrayList<>();
         //All categories button
         Button allCatButton = new Button(this);
         allCatButton.setText(getResources().getString(R.string.allCatButtonText));
         allCatButton.setHeight(200);
         allCatButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, GameMain.class);
-            intent.putExtra("categoryID", 0);
+            selectedIDs.add(0);
+            intent.putExtra("categoryIDs", selectedIDs);
             startActivity(intent);
         });
         linearLayout.addView(allCatButton);
@@ -65,7 +68,6 @@ public class GameCategories extends AppCompatActivity {
 
         //Categories buttons
         Button[] catButtons = new Button[categoriesList.size()];
-        ArrayList<Integer> selectedIDs = new ArrayList<>();
         for (int i = 0; i < catButtons.length; i++) {
             catButtons[i] = new Button(this);
             catButtons[i].setText(categoriesList.get(i).getCategoryName());
@@ -91,9 +93,13 @@ public class GameCategories extends AppCompatActivity {
 
         FloatingActionButton playSelectedCategoriesFAB = findViewById(R.id.playFAB);
         playSelectedCategoriesFAB.setOnClickListener(view -> {
-            Intent intent = new Intent(this, GameMain.class);
-            intent.putExtra("categoryIDs", selectedIDs); //Passes chosen categoryIDs to new opened activity
-            startActivity(intent); //Starts GameMain Activity
+            if (selectedIDs.isEmpty()) {
+                Snackbar.make(view, "Wybierz pierw kategorie!", Snackbar.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(this, GameMain.class);
+                intent.putExtra("categoryIDs", selectedIDs); //Passes chosen categoryIDs to new opened activity
+                startActivity(intent); //Starts GameMain Activity
+            }
         });
     }
 }
